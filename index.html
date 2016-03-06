@@ -1,33 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Muddaser Ahmed</title>
-</head>
-<body>
-	<h1>Some pretty neat blog</h1>
-	<div id="disqus_thread"></div>
-	<script>
-	/**
-	* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-	* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-	*/
-	
-	var disqus_config = function () {
-	this.page.url = 'http://muddaserahmed.github.io/'; // Replace PAGE_URL with your page's canonical URL variable
-	this.page.identifier = 'first-blog'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
-	
-	(function() { // DON'T EDIT BELOW THIS LINE
-	var d = document, s = d.createElement('script');
+---
+layout: default
+---
 
-	s.src = '//muddaserahmed.disqus.com/embed.js';
+<div class="home">
 
-	s.setAttribute('data-timestamp', +new Date());
-	(d.head || d.body).appendChild(s);
-	})();
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  <h1 class="page-heading">Posts</h1>
 
-	<script id="dsq-count-scr" src="//muddaserahmed.disqus.com/count.js" async></script>
-</body>
-</html>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
