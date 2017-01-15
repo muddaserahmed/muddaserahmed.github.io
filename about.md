@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Email: muddaserahmed@gmail.com
+Email: muddaserahmed@gmail.com /
 Skype: muddaser.ahmed
 
 You can find the source code for the Jekyll new theme at:
